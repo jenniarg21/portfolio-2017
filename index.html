@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="description" content="Jennifer Argote's web development portfolio" />
+	<meta name="keywords" content="Web developer, Fontend developer, Backend developer, HTML, CSS, JavaScript, PHP" />
+	<meta name="author" content="Jennifer Argote" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Jennifer Argote ~ Portfolio</title>
+	<link rel="shortcut icon" type="image/x-icon" href="assets/favicon_jenniarg.ico" />
+	<link href="https://fonts.googleapis.com/css?family=Emilys+Candy" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="pages/mainstyles.css" />
+	<script src="scripts/scrollscript.js"></script>
+</head>
+
+<body>
+<header id="topContainer">
+	<div id="title">
+		<a href="index.html"><h1>Jennifer Argote</h1></a>
+	</div>
+	<input type="checkbox" id="show-menu" />
+	<label for="show-menu" class="navIcon"><img src="assets/menu_icon.png" alt="Show Menu" id="showMenu" /><img src="assets/close_icon.png" alt="Close Menu" id="closeMenu" /></label>
+	<div id="mainNav">
+		<ul id="nav">
+			<li><a href="#about">about</a></li>
+			<li><a href="#portfolio">portfolio</a></li>
+			<li><a href="#contact">contact</a></li>
+		</ul>
+	</div>
+</header>
+
+<div id="container">
+<!-- About me -->
+	<div id="mainContent">
+		<div>
+			<a id="about" class="anchor"></a>
+			<h2>About Me</h2>
+			<p>I'm searching for a passionate team to join, and I'm eager to learn and grow. I'm seeking to expand my skill sets in web development and design.</p>
+			<p>Through my educational journey, I learned aspects of both frontend and backend web development. I also learned that for a smooth development process, it's important to be able to bridge the gap between frontend and backend development. With my background, I hope to aid in that bridge.</p>
+			<p>Outside of web development, I enjoy dancing, Japanese street fashion, vegan delights, and anime.</p>
+
+			<h3>Technical Skills</h3>
+			<h4>Languages</h4>
+			<ul class="list">
+				<li>HTML/CSS</li>
+				<li>PHP</li>
+				<li>SQL</li>
+				<li>JavaScript</li>
+				<li>Java</li>
+				<li>C</li>
+			</ul>
+			
+			<h4>Applications</h4>
+			<ul class="list">
+				<li>Git</li>
+				<li>MS SharePoint 2010/2013</li>
+				<li>Wordpress</li>
+				<li>Drupal</li>
+				<li>ASP.NET</li>
+			</ul>
+		</div>
+<!-- Portfolio -->
+		<a id="portfolio" class="anchor"></a>
+		<h2>Portfolio</h2>
+		<p>Hover over any project image to view quick details, and click on any project title to display more information.</p>
+		
+		<h3>PHP/MySQL</h3>
+		<div class="projCont">
+			<input type="radio" id="dvdbay" name="showProjInfo" />
+			<div class="project">
+				<div class="textOverlay">
+					<label for="dvdbay" class="projLabel" title="Click for more info" onclick="scrollToProj(this.parentElement.parentElement)">
+						<span class="projTitle">DVDBay</span><br />
+						<span class="subtitle">PHP/MySQL &amp; HTML/CSS</span>
+					</label>
+					<div class="projLinks">
+						<a href="http://jenniarg.com/movies/" target="_blank" title="View live project">Deployed Project</a>
+						<a href="https://github.com/jenniarg21/dvdbay" title="View source code on my GitHub">Source Code</a>
+					</div>
+				</div>		
+				<img src="assets/dvdbay.png" alt="DVDBay" />
+			</div>
+			<input type="radio" id="closeDvdbayInfo" name="showProjInfo" class="closeInfoOpt" />
+			<div class="info">
+				<label for="closeDvdbayInfo" class="closeInfoLabel" onclick="scrollToProj(this.parentElement.parentElement.previousElementSibling)">Close Info</label>
+				<p>This is an updated project that was built in a PHP version below 5.5. I updated it to be compliant with PHP 7 and updated both the design and functionality. This website allows end users to view DVD's for purchase and create accounts. It also lets administrators add products to the database which get displayed for the end users. With that said, I have not added purchasability--this is a future functionality.</p>
+				<p>The design is now modern:</p>
+				<ul>
+					<li>Header is fixed on the page and consists of dynamic dropdown menus for navigation</li>
+					<li>Footer contains entire navigation for usability</li>
+					<li>Images are more prevalent than previously on the landing page</li>
+					<li>Images for the DVD covers have a text overlay to assist with usability in reading title names that may be too small on read on the images</li>
+					<li>Design is somewhat responsive (exclusion with the header navigation for smaller resolution displays)</li>
+				</ul>
+				<p>Functionality-wise:</p>
+				<ul>
+					<li>This site now uses sessions on each page instead of using the GET method for user login verification--which was a huge security risk previously</li>
+					<li>Header code, footer code, and re-usable PHP scripts are brought in from separate files to make it easier to make changes across the website and cuts down on lines of code</li>
+					<li>Database credentials are now separated in a private configuration file</li>
+				</ul>
+				<p>This project is still a work-in-progress but it shows a fair amount of my skill level in PHP and MySQL. And it also shows how fast I can pick up new/updated technologies as this revamp was done on a single weekend.</p>
+				<p>If you'd like to see what an admin view would be like on the DVDBay website here are some credentials (don't worry, I trust you~):<br /> Username: admin@movies.com Password: pass123</p>
+			</div>
+
+			<input type="radio" id="gs" name="showProjInfo" />
+			<div class="project">
+				<div class="textOverlay">
+					<label for="gs" class="projLabel" title="Click for more info" onclick="scrollToProj(this.parentElement.parentElement)">
+						<span class="projTitle">Grocery Store Items</span><br />
+						<span class="subtitle">PHP/MySQL &amp; HTML/CSS</span>
+					</label>
+					<div class="projLinks">
+						<a href="http://jenniarg.com/gs/" target="_blank" title="View live project">Deployed Project</a>
+						<a href="https://github.com/jenniarg21/php-store-items" title="View source code on my GitHub">Source Code</a>
+					</div>
+				</div>
+				<img src="assets/gs.png" alt="Grocery Store" />
+			</div>
+			<input type="radio" id="closeGsInfo" name="showProjInfo" class="closeInfoOpt" />
+			<div class="info">
+				<label for="closeGsInfo" class="closeInfoLabel" onclick="scrollToProj(this.parentElement.parentElement.previousElementSibling)">Close Info</label>
+				<p>This was a short assignment in which we were to:</p>
+				<ul>
+					<li>Create a database and populate it</li>
+					<li>Pull data from the database and display it on the page</li>
+					<li>Use pagination to limit the amount of pulled data to be displayed</li>
+					<li>Additionally, there's a simple filtering option</li>
+				</ul>
+			</div>
+		</div>
+
+		<h3>JavaScript &amp; JQuery</h3>
+		<div class="projCont">
+			<input type="radio" id="questionmark" name="showProjInfo" />
+			<div class="project">
+				<div class="textOverlay">
+					<label for="questionmark" class="projLabel" title="Click for more info" onclick="scrollToProj(this.parentElement.parentElement)">
+						<span class="projTitle">questionmark [[?]]</span><br />
+						<span class="subtitle">JavaScript &amp; HTML/CSS</span>
+					</label>
+					<div class="projLinks">
+						<a href="http://mason.gmu.edu/~jargote/IT331/index.html" target="_blank" title="View live project">Deployed Project</a>
+						<a href="#" title="view source code on my GitHub">Source Code</a>
+					</div>
+				</div>
+				<img src="assets/questionmark.png" alt="questionmark" />
+			</div>
+			<input type="radio" id="closeQuestionmarkInfo" name="showProjInfo" class="closeInfoOpt" />
+			<div class="info">
+				<label for="closeQuestionmarkInfo" class="closeInfoLabel" onclick="scrollToProj(this.parentElement.parentElement.previousElementSibling)">Close Info</label>
+				<p>This project was built as a fictitious band site called Questionmark. This was a school project where I first learned javascript. Javascript is written throughout the website and I outline these functionalities below.</p>
+				<p>The index page consists of the following:</p>
+				<ul>
+					<li>Buttons to increase/decrease font size on page</li>
+					<li>A button that opens lyrics in a pop-up window</li>
+				</ul>
+				<p>The Events page consists of the following:</p>
+				<ul>
+					<li>An animated image which can be stopped by pressing a button</li>
+					<li>A calendar in which a date can be chosen and the chosen date will appear right above the calendar</li>
+					<li>An events table in which the table headers are clickable to adjust sorting</li>
+				</ul>
+				<p>The Members page consists of the following:</p>
+				<ul>
+					<li>Band member images in which hovering over will display a tooltip</li>
+				</ul>
+				<p>The Music page consists of the following:</p>
+				<ul>
+					<li>CD release covers (images) in which hovering over will display information in the section directly below</li>
+				</ul>
+				<p>The Guestbook page consists of the following:</p>
+				<ul>
+					<li>A form which is validated prior to submission</li>
+				</ul>
+			</div>
+			
+			<input type="radio" id="animeClub" name="showProjInfo" />
+			<div class="project">
+				<div class="textOverlay">
+					<label for="animeClub" class="projLabel" title="Click for more info" onclick="scrollToProj(this.parentElement.parentElement)">
+						<span class="projTitle">Anime Club</span><br />
+						<span class="subtitle">JavaScript &amp; HTML/CSS</span>
+					</label>
+					<div class="projLinks">
+						<a href="http://www.student.nvcc.edu/home/jargote/site2/" target="_blank" title="View live project">Deployed Project</a>
+						<a href="#" title="View source code on my GitHub">Source Code</a>
+					</div>
+				</div>
+				<img src="assets/animeClub.png" alt="Anime Club" />
+			</div>
+			<input type="radio" id="closeAnimeInfo" name="showProjInfo" class="closeInfoOpt" />
+			<div class="info">
+				<label for="closeAnimeInfo" class="closeInfoLabel" onclick="scrollToProj(this.parentElement.parentElement.previousElementSibling)">Close Info</label>
+				<p>This project was for the Anime Club's website. This was a school project where we had to incorporate a couple pre-built javascript applications. It contains the following javascript applications:</p>
+				<ul>
+					<li>Image galleries (Lightbox)</li>
+					<li>Dropdown menus (Spry menu bar)</li>
+				</ul>
+				<p>New design update coming soon~</p>
+			</div>
+		</div>
+
+		<h3>HTML/CSS</h3>
+		<div class="projCont">
+			<input type="radio" id="ja" name="showProjInfo" />
+			<div class="project">
+				<div class="textOverlay">
+					<label for="ja" class="projLabel" title="Click for more info" onclick="scrollToProj(this.parentElement.parentElement)">
+						<span class="projTitle">Portfolio</span><br />
+						<span class="subtitle">HTML/CSS</span>
+					</label>
+					<div class="projLinks">
+						<a href="http://jenniarg.com" title="View live project">Deployed Project</a>
+						<a href="#" title="View source code on my GitHub">Source Code</a>
+					</div>
+				</div>
+				<img src="assets/ja.png" alt="My Portfolio Website" />
+			</div>
+			<input type="radio" id="closePortfolioInfo" name="showProjInfo" class="closeInfoOpt" />
+			<div class="info">
+				<label for="closePortfolioInfo" class="closeInfoLabel" onclick="scrollToProj(this.parentElement.parentElement.previousElementSibling)">Close Info</label>
+				<p>This is the webpage you're currently on. I challenged myself to only use CSS for styling instead of using javascript or jquery. However, I wrote a javascript function to scroll the window up when clicking on the project titles or the "Close Info" buttons.</p>
+				<p>The following were created with pure CSS:</p>
+				<ul>
+					<li>The webpage is responsive using media queries and non-fixed widths with inline elements</li>
+					<li>Navigation menu with responsive menu icon which changes to a close icon when clicked (hidden checkbox and labels)</li>
+					<li>Text overlays on hovering over the project images</li>
+					<li>Text overlay changing background color once clicked on for more information on a project</li>
+					<li>Displaying and hiding information by clicking on the project titles (with the use of hidden radio buttons and labels)</li>
+					<li>Uses Google fonts</li>
+					<li>Uses box shadows on project information background for styling effect</li>
+					<li>Uses borders and border radius on specific links to mimic a button</li>
+				</ul>
+			</div>
+
+			<input type="radio" id="paw" name="showProjInfo" />
+			<div class="project">
+				<div class="textOverlay">
+					<label for="paw" class="projLabel" title="Click for more info" onclick="scrollToProj(this.parentElement.parentElement)">
+						<span class="projTitle">PAW</span><br />
+						<span class="subtitle">HTML/CSS</span>
+					</label>
+					<div class="projLinks">
+						<a href="http://mason.gmu.edu/~jargote/IT431/PAW/index.html" target="_blank" title="View live project">Deployed Project</a>
+						<a href="#" title="View source code on my GitHub">Source Code</a>
+					</div>
+				</div>
+				<img src="assets/paw.png" alt="PAW" />
+			</div>
+			<input type="radio" id="closePawInfo" name="showProjInfo" class="closeInfoOpt" />
+			<div class="info">
+				<label for="closePawInfo" class="closeInfoLabel" onclick="scrollToProj(this.parentElement.parentElement.previousElementSibling)">Close Info</label>
+				<p>This was a school project which was initially written with ASP.NET; unfortunatly my current host is incompatible with ASP.NET websites so I can't showcase any live ASP.NET websites.</p>
+				<p>In the ASP.NET version, this website:</p>
+				<ul>
+					<li>Used customized master pages</li>
+					<li>Had reusable functions for the image gallery</li>
+					<li>Had a validated form</li>
+				</ul>
+			</div>
+			
+			<input type="radio" id="wda" name="showProjInfo" />
+			<div class="project">
+				<div class="textOverlay">
+					<label for="wda" class="projLabel" title="Click for more info" onclick="scrollToProj(this.parentElement.parentElement)">
+						<span class="projTitle">WDA</span><br />
+						<span class="subtitle">HTML/CSS</span>
+					</label>
+					<div class="projLinks">
+						<a href="http://mason.gmu.edu/~jargote/IT431/WDA/index.html" target="_blank" title="View live project">Deployed Project</a>
+						<a href="#" title="View source code on my GitHub">Source Code</a>
+					</div>
+				</div>
+				<img src="assets/wda.png" alt="WDA" />
+			</div>
+			<input type="radio" id="closeWdaInfo" name="showProjInfo" class="closeInfoOpt" />
+			<div class="info">
+				<label for="closeWdaInfo" class="closeInfoLabel" onclick="scrollToProj(this.parentElement.parentElement.previousElementSibling)">Close Info</label>
+				<p>This started out as a simple group project. I plan to update the design in due time. Come back later~</p>
+			</div>
+			
+			<input type="radio" id="hm" name="showProjInfo" />
+			<div class="project">
+				<div class="textOverlay">
+					<label for="hm" class="projLabel" title="Click for more info" onclick="scrollToProj(this.parentElement.parentElement)">
+						<span class="projTitle">Helping Malawi</span><br />
+						<span class="subtitle">HTML/CSS</span>
+					</label>
+					<div class="projLinks">
+						<a href="http://mason.gmu.edu/~jargote/IT304/index.html" target="_blank" title="View live project">Deployed Project</a>
+						<a href="#" title="View source code on my GitHub">Source Code</a>
+					</div>
+				</div>
+				<img src="assets/helpingMalawi.png" alt="Helping Malawi" />
+			</div>
+			<input type="radio" id="closeHmInfo" name="showProjInfo" class="closeInfoOpt" />
+			<div class="info">
+				<label for="closeHmInfo" class="closeInfoLabel" onclick="scrollToProj(this.parentElement.parentElement.previousElementSibling)">Close Info</label>
+				<p>This was a research project on a given country--I was assigned Malawi. We had to come up with a tech solution to aid the country in any way possible. And although this wasn't a web related course, we were to build a website to showcase our research.</p>
+			</div>
+		</div>
+		
+<!--	
+		<div class="projCont">
+			<a href="http://www.student.nvcc.edu/home/jargote/site1/" target="_blank">
+				<div class="project">
+					<img src="assets/vegansVeggies.png" alt="Vegans & Vegetarians" />
+					<div class="textOverlay">
+						<h3 class="headingWithSubtitle">Vegans &amp; Vegetarians</h3>
+						<span class="subtitle">html/css</span>
+					</div>
+				</div>
+			</a>
+			
+			<a href="http://www.student.nvcc.edu/home/jargote/ITE130/index.html" target="_blank">
+				<div class="project">
+					<img src="assets/JenniA.png" alt="Jenni A" />
+					<div class="textOverlay">
+						<h3 class="headingWithSubtitle">Jenni A</h3>
+						<span class="subtitle">html/css</span>
+					</div>
+				</div>
+			</a>
+			
+			<a href="http://mason.gmu.edu/~jargote/nova/ART116/index.html" target="_blank">
+				<div class="project">
+					<img src="assets/deluxeFiction.png" alt="Deluxe Fiction" />
+					<div class="textOverlay">
+						<h3 class="headingWithSubtitle">Deluxe Fiction</h3>
+						<span class="subtitle">html/css</span>
+					</div>
+				</div>
+			</a>
+			
+			<a href="http://mason.gmu.edu/~jargote/nova/ITE115/finalhw2.htm" target="_blank">
+				<div class="project">
+					<img src="assets/webPage.png" alt="Web Page" />
+					<div class="textOverlay">
+						<h3 class="headingWithSubtitle">Web Page</h3>
+						<span class="subtitle">html/css</span>
+					</div>
+				</div>
+			</a>
+		</div> -->
+	</div>
+</div>
+
+<footer id="bottomContainer">
+	<div id="footer">
+		<a id="contact" class="anchor"></a>
+		<h2>Contact</h2>
+		<p>Connect with me on social media or email me.</p>
+		<div id="contactLinks">
+			<a href="https://www.linkedin.com/in/jennifer-argote-413b67132"><img src="assets/linkedin_icon.png" alt="My LinkedIn link" class="social" /></a>
+			<a href="https://github.com/jenniarg21"><img src="assets/github_icon.png" alt="My GitHub link" class="social" /></a>
+			<a href="mailto:jenniarg21@gmail.com"><img src="assets/email_icon.png" alt="Email me" class="social" /></a>
+		</div>
+	</div>
+</footer>
+</body>
+</html>
